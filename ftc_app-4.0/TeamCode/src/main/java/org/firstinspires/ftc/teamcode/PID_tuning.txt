@@ -1,0 +1,21 @@
+2/27/2018 PID Tuning
+
+// 0.008, 0.005, 0, -1, 0.5 <-- consistently overshoots
+// 0.008, 0.005, 0, 20, 0.5 <-- undershoots with P, and then I starts to build up and pushes it past target threshold
+// 0.008, 0.005, 0, 60, 0.5 <-- so it gets really close but then it takes a long time to get to 0. choosing to turn up I now
+// 0.008, 0.008, 0, 45, 0.5 <-- again it gets really close and then shoots past thresh
+// 0.008, 0.005, 0, 75, 0.5 <-- nails 90 degree turn but the correction is really slow. bumnping up I term and lowering iThresh
+// 0.008, 0.008, 0, 60, 0.5 <-- overshoots, error correction is really fukin slow, bumping up I, lowering iThresh, and lowering target thresh
+// 0.008, 0.011, 0, 35, 1 <-- under the mark. bumping up iThresh
+// 0.008, 0.011, 0, 40, 1 <-- damn that was really good. I'm gonna add more Ki for faster improvement but i liked it
+// 0.008, 0.013, 0, 35, 1 <-- ok this is a solid value. im keeping this
+
+-------------------------
+
+3/2/2018 PID Tuning
+
+// 0.007, 0.005, 0, 35, 0.5 <-- oscillation is less bad but Ki should still be lower i think. also raising target
+// 0.007, 0.003, 0, 35, 1 <-- this is good but fixing can sometimes be slow
+// 0.006, 0.006, 0, 35, 1 <-- also good, but i would be more comfortable with higher Ki
+// 0.005, 0.008, 0, 35, 1 <-- bad. not good at correcting. staying with above
+//
